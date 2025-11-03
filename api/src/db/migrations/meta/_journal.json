@@ -8,6 +8,13 @@
       "when": 1762104217678,
       "tag": "0000_goofy_toad_men",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1762188196084,
+      "tag": "0001_yummy_mauler",
+      "breakpoints": true
     }
   ]
 }
