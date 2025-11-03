@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
+import { twMerge } from "tailwind-merge";
 import { SectionDataTable } from "../components/section-data-table";
 import { SectionTitle } from "../components/section-title";
 import { Sidebar } from "../components/sidebar";
@@ -31,7 +32,14 @@ function Index() {
 					<div className="flex h-full flex-col">
 						<WebhookDetailHeader />
 
-						<div className="flex-1 overflow-y-auto">
+						<div
+							className={twMerge(
+								"flex-1 overflow-y-auto",
+								"[&::-webkit-scrollbar]:hidden [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-transparent",
+								" [&::-webkit-scrollbar-thumb]:bg-zinc-700 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb:hover]:bg-zinc-600",
+								"[scrollbar-width:thin] [scrollbar-color:#4b5563_transparent]",
+							)}
+						>
 							<div className="space-y-6 p-6">
 								<div className="space-y-4">
 									<SectionTitle>Request Overview</SectionTitle>
